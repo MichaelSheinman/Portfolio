@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael Sheinman Orenstrakh</title>
+  <meta name="description" content="Software engineer in Toronto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="topbar">
+    <a class="brand" href="#">Michael Sheinman</a>
+    <div class="nav-links">
+      <a href="#blog">Blog</a>
+      <a href="https://github.com/MichaelSheinman">GitHub</a>
+      <a href="https://www.linkedin.com/in/michael-sheinman-orenstrakh/">LinkedIn</a>
+      <a href="mailto:sheinman.michael@gmail.com">Email</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm<br><span class="name">Michael Sheinman</span></h1>
+      <p>Software engineer</p>
+      <p class="edu">HBSc Computer Science, University of Toronto, with high distinction</p>
+    </div>
+    <img class="photo" src="images/profile.jpg" width="640" height="640" alt="Michael Sheinman">
+  </header>
+
+  <main class="done">
+    <h2>Experience</h2>
+
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" aria-controls="work" id="tab-work">Work</button>
+      <button role="tab" aria-selected="false" aria-controls="projects" id="tab-projects">Projects</button>
+    </div>
+
+    <ol class="timeline" id="work" role="tabpanel" aria-labelledby="tab-work">
+      <li><details>
+        <summary><h3>Senior Full Stack Engineer, Navattic</h3><span class="when">2024 - present</span><p>AI that captures websites and keeps product demos up to date</p></summary>
+        <ul>
+          <li>Built Autocapture, which recaptures a customer's website so their demo stays current without anyone retaking captures.</li>
+          <li>Built AI editing for captures and demos through the Navattic MCP.</li>
+          <li>Built the video editor, image editor and capture editor.</li>
+        </ul>
+      </details></li>
+      <li><details>
+        <summary><h3>Software Engineer, Circle</h3><span class="when">2023 - 2024</span><p>Launched USDC on ZKsync</p></summary>
+        <ul>
+          <li>Led the ZKsync launch: payment API in Java, monitoring in Terraform, database migrations and end-to-end tests.</li>
+          <li>Led a migration covering $300M of USDC across several teams.</li>
+          <li>Moved 200 million rows in AWS RDS with no downtime.</li>
+        </ul>
+      </details></li>
+      <li><details>
+        <summary><h3>Software Engineer Intern, Citi</h3><span class="when">2022</span><p>A trading app used by over 1,000 traders</p></summary>
+        <ul>
+          <li>Maintained a trading application for options, bonds and ETFs.</li>
+          <li>Cut latency at peak hours with faster SQL queries.</li>
+        </ul>
+      </details></li>
+      <li><details>
+        <summary><h3>Head Teaching Assistant, University of Toronto</h3><span class="when">2020 - 2023</span><p>Data structures, operating systems, parallel programming</p></summary>
+        <ul>
+          <li>Raised attendance by half with an active-learning format.</li>
+        </ul>
+      </details></li>
+      <li><details>
+        <summary><h3>Software Engineer, Korcode</h3><span class="when">2019 - 2020</span><p>Full-stack internal tools</p></summary>
+        <ul>
+          <li>Built REST APIs over MySQL and tools that sped up internal operations by half.</li>
+        </ul>
+      </details></li>
+    </ol>
+
+    <ol class="timeline" id="projects" role="tabpanel" aria-labelledby="tab-projects" hidden>
+      <li><details>
+        <summary><h3>Escape the Matrix</h3><span class="when">2026 - present</span><p>A life simulator about how rules depend on the people living under them</p></summary>
+        <ul>
+          <li>Live one real day at a time: hold a job, keep your health, and settle daily conflicts through rules you write.</li>
+          <li>Next up: living under policies like a rent law or a minimum wage as a resident does.</li>
+          <li>Go, React, PostgreSQL. <a href="https://github.com/MichaelSheinman/EscapeTheMatrix">Source on GitHub</a></li>
+        </ul>
+      </details></li>
+      <li><details>
+        <summary><h3>Research Paper, IEEE COMPSAC</h3><span class="when">2024</span><p>Detecting LLM-Generated Text in Computing Education</p></summary>
+        <ul>
+          <li>First author. Ran student and ChatGPT-written assignments through eight AI-text detectors.</li>
+          <li>GPTZero flagged 52 of 114 human-written submissions, and every detector did worse on code and paraphrased text.</li>
+          <li><a href="https://ieeexplore.ieee.org/document/10633247/">IEEE Xplore</a> · <a href="https://arxiv.org/abs/2307.07411">arXiv</a></li>
+        </ul>
+      </details></li>
+      <li><details>
+        <summary><h3>Extended GPT-2 Output Detector</h3><span class="when">2023</span><p>OpenAI's AI-text detector, extended for grading whole classes</p></summary>
+        <ul>
+          <li>Removed the token limit by scoring long text in batches and averaging the results.</li>
+          <li>Added PDF and text uploads, and zip uploads that score every submission in a class at once.</li>
+          <li><a href="https://github.com/MichaelSheinman/Extended-GPT2-Output-Detector">Source on GitHub</a> · <a href="https://michaelsheinman.medium.com/how-i-improved-the-gpt2-output-detector-6e47ba133235">Write-up on Medium</a></li>
+        </ul>
+      </details></li>
+      <li><details>
+        <summary><h3>Short Story Generator</h3><span class="when">2023</span><p>GPT-2 writes a bedtime story, an LSTM titles it</p></summary>
+        <ul>
+          <li>Fine-tuned GPT-2 to continue a story from its first line, and trained an LSTM from scratch to title it.</li>
+          <li><a href="https://github.com/MichaelSheinman/short-story-generator">Source on GitHub</a></li>
+        </ul>
+      </details></li>
+      <li><details>
+        <summary><h3>Key-Value Service</h3><span class="when">2022</span><p>A horizontally scaled key-value store on Docker Swarm</p></summary>
+        <ul>
+          <li>Three stateless Go servers behind Swarm's load balancer, sharing one Redis instance, so any replica can serve any request.</li>
+          <li>Swarm restarts failed replicas, and Redis evicts least recently used keys once it reaches its memory cap.</li>
+          <li>Go, Redis, Docker Swarm. <a href="https://github.com/MichaelSheinman/Key-Value-Service">Source on GitHub</a></li>
+        </ul>
+      </details></li>
+      <li><details>
+        <summary><h3>Restify</h3><span class="when">2022</span><p>A social network for restaurants, built by a team of three</p></summary>
+        <ul>
+          <li>Restaurant owners post menus and blog updates, and diners follow, like and comment.</li>
+          <li>Built the JWT accounts API, notifications, restaurant creation, and a scraper that seeded real restaurant data.</li>
+          <li>Django REST Framework, React. <a href="https://github.com/MichaelSheinman/Restify">Source on GitHub</a></li>
+        </ul>
+      </details></li>
+    </ol>
+  </main>
+
+  <section class="blog" id="blog">
+    <h2>Blog</h2>
+    <p class="sub">Writing on AI, politics and careers</p>
+
+    <div class="posts">
+      <a class="post" href="https://michaelsheinman.medium.com/personal-growth-in-political-understanding-91754da3f923">
+        <time datetime="2026-06-22">June 2026</time>
+        <h3>Personal Growth in Political Understanding</h3>
+        <p>How I completely changed my opinions</p>
+      </a>
+      <a class="post" href="https://michaelsheinman.medium.com/tracking-ai-generated-scams-869768b7ba26">
+        <time datetime="2023-10-29">October 2023</time>
+        <h3>Tracking AI-Generated Scams</h3>
+        <p>AI-generated videos, comments and blog posts used to sell fake products</p>
+      </a>
+      <a class="post" href="https://michaelsheinman.medium.com/how-to-land-a-new-grad-job-324130809d2b">
+        <time datetime="2023-02-10">February 2023</time>
+        <h3>How to Land a New Grad Job</h3>
+        <p>A guide to landing a software development job after graduation</p>
+      </a>
+      <a class="post" href="https://michaelsheinman.medium.com/a-review-of-openais-new-ai-detector-7dc4c34f6d14">
+        <time datetime="2023-02-01">February 2023</time>
+        <h3>A Review of OpenAI's AI Detector</h3>
+        <p>It's designed for the competition, not for ChatGPT</p>
+      </a>
+    </div>
+
+    <a class="all-posts" href="https://michaelsheinman.medium.com/">All posts on Medium</a>
+  </section>
+
+  <script>
+    const tabs = document.querySelectorAll('[role="tab"]');
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', on);
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+    }));
+  </script>
+</body>
+</html>
